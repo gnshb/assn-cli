@@ -15,4 +15,6 @@
 
 - Link the script: `sudo ln -s ~/.assn-cli/assn /usr/local/bin/`
 
-- Setup credentials: `sh ~/.assn-cli/init.sh username password`
+- Setup credentials: `sh ~/.assn-cli/init.sh 'username' 'password'`
+
+Note: make sure to escape quotes and double quotes when you setup your password with a backslash `\`

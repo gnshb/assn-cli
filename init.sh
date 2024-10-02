@@ -11,11 +11,8 @@ elif [ ! $# -eq 2 ]
     exit 1
 fi
 
-username=$1;
-password=$2;
-
-sed -ie 's/const username;/const username = "$(username)";/g' 's/const password;/const password = "$(password)";/g' main.js;
+sed -i -e "s/.*const username.*/const username = \"$1\";/g" -e "s/.*const password.*/const password = \"$2\";/g" ~/.assn-cli/main.js;
 
 echo "Following credentials set!"
-echo "Username: $username";
-echo "Password: $password";
+echo "Username: $1";
+echo "Password: $2";
