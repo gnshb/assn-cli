@@ -14,3 +14,5 @@
 - Clone into repository `pushd ~; git clone https://github.com/gnshb/assn-cli .assn-cli; popd;`
 
 - Link the script: `sudo ln -s ~/.assn-cli/assn /usr/local/bin/`
+
+- Setup credentials: `sh ~/.assn-cli/init.sh username password`
