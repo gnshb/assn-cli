@@ -17,4 +17,4 @@
 
 - Setup credentials: `sh ~/.assn-cli/init.sh 'username' 'password'`
 
-Note: make sure to escape quotes and double quotes when you setup your password with a backslash `\`
+Note: make sure to escape double quotes when you setup your password with a backslash `\`. If your password has single quotes, use double quotes to enclose it.

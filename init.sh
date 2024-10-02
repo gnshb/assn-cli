@@ -11,7 +11,7 @@ elif [ ! $# -eq 2 ]
     exit 1
 fi
 
-sed -i -e "s/.*const username.*/const username = \"$1\";/g" -e "s/.*const password.*/const password = \"$2\";/g" ~/.assn-cli/main.js;
+sed -i -e "s/.*const username.*/const username = \"$1\";/g" -e "s/.*const password.*/const password = \"$(echo $2 | sed 's/\\/\\\\/g')\";/g" ~/.assn-cli/main.js;
 
 echo "Following credentials set!"
 echo "Username: $1";
