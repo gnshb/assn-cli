@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 pushd ~/.assn-cli/ > /dev/null;
-node ./auto.js 2&>/dev/null;
+node ./main.js 2&>/dev/null;
 
 if [ ! -f ./temp.mhtml ]; then
     echo "Setup credentials first!"
