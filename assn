@@ -7,8 +7,7 @@ if [ ! -f ./temp.mhtml ]; then
     exit 1;
 fi
 
-if grep -Fq "due on" ./temp.mhtml
-then
+if grep -Fq "due on" ./temp.mhtml; then
 	sed -n -e '/due on/p' ./temp.mhtml | sed -e 's/,//g' -e 's/.*activity in //g' -e "s/:.*is due on /,/g" -e 's/">//g' | sed '1iCourse,Due on' | awk -F ',' '{print $0}' | tty-table;
 else
 	echo "No assignments due!";
